@@ -2,7 +2,7 @@ import React from 'react';
 import useWebAnimations from "@wellyshen/use-web-animations";
 
 export const Car = () => {
-    const  {ref, getAnimation} = useWebAnimations({
+    const  {ref} = useWebAnimations({
         keyframes: [
             { transform: 'translateY(-1px)' },
             { transform: 'translateY(1px)' },
@@ -14,12 +14,8 @@ export const Car = () => {
         },
       });
 
-      const speedUp = () => {
-        const animation = getAnimation();
-        animation.updatePlaybackRate(animation.playbackRate *= 1.1);
-      };
     return (
-        <div className="car" ref={ref} onClick={speedUp}>
+        <div className="car" ref={ref}>
         <img src={process.env.PUBLIC_URL + "/images/car.png"} alt="" />
       </div>
     )
