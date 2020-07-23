@@ -4,7 +4,9 @@ import useWebAnimations from "@wellyshen/use-web-animations";
 export const Car = () => {
     const  {ref} = useWebAnimations({
         keyframes: [
-             
+            { transform: 'translateY(-1px)' },
+            { transform: 'translateY(1px)' },
+            { transform: 'translateY(-1px)' } 
         ],
         timing: {
           duration: 1000,
