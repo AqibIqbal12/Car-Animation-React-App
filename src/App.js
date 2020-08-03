@@ -3,8 +3,7 @@ import {Highway} from './Components/Highway';
 import {Clouds} from './Components/Clouds';
 import {City} from './Components/City';
 import {Car} from './Components/Car';
-import {Backwheel} from './Components/Backwheel';
-import {Frontwheel} from './Components/Frontwheel'
+import { Wheel } from './Components/Wheel'
 import './App.css';
 
 export const App = () => {
@@ -16,9 +15,7 @@ export const App = () => {
       <Clouds/>
       <City/>
       <Car/>
-      <Backwheel/>
-      <Frontwheel/>
-
+      <Wheel/>
     </div>
   )
 }
