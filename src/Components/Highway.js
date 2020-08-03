@@ -1,10 +1,9 @@
 import React,{useEffect} from 'react';
 import useWebAnimations from "@wellyshen/use-web-animations";
 
-
 export const Highway = () => {
 
-    const  {ref, getAnimation} = useWebAnimations({
+    const  {ref: ref1, getAnimation} = useWebAnimations({
         keyframes: [
           { transform: 'translateX(-3400px)' } 
         ],
@@ -12,8 +11,9 @@ export const Highway = () => {
           duration: 50000,
           iterations: Infinity
         },
+        
       });
-
+        
       useEffect(() => {
         document.addEventListener("click", (e) => {
           const animation = getAnimation();
@@ -23,7 +23,7 @@ export const Highway = () => {
     
     return (
 
-        <div className="highway" ref={ref}>
+        <div className="highway" ref={ref1}>
 
         </div>
 
